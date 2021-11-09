@@ -47,5 +47,41 @@ namespace TemperatureOver39.Tests
             temp = temp * 3;
             Assert.AreEqual("123 °F", temp.Output());
         }
+        [TestMethod()]
+        public void CelsToAnyTest()
+        {
+            Temperature temp;
+
+            temp = new Temperature(100, TempType.c);
+            Assert.AreEqual("212 °F", temp.To(TempType.f).Output());
+            temp = new Temperature(100, TempType.c);
+            Assert.AreEqual("373,15 K", temp.To(TempType.k).Output());
+            temp = new Temperature(100, TempType.c);
+            Assert.AreEqual("671,67 °Ra", temp.To(TempType.r).Output());
+        }
+        [TestMethod()]
+        public void AnyToCelsTest()
+        {
+            Temperature temp;
+
+            temp = new Temperature(212, TempType.f);
+            Assert.AreEqual("100 °C", temp.To(TempType.c).Output());
+            temp = new Temperature(373.15, TempType.k);
+            Assert.AreEqual("100 °C", temp.To(TempType.c).Output());
+            temp = new Temperature(671.67, TempType.r);
+            Assert.AreEqual("100 °C", temp.To(TempType.c).Output());
+        }
+        [TestMethod()]
+        public void AnyToAnyTest()
+        {
+            Temperature temp;
+
+            temp = new Temperature(373.15, TempType.k);
+            Assert.AreEqual("212 °F", temp.To(TempType.f).Output());
+            temp = new Temperature(671.67, TempType.r);
+            Assert.AreEqual("373,15 K", temp.To(TempType.k).Output());
+            temp = new Temperature(212, TempType.f);
+            Assert.AreEqual("671,67 °Ra", temp.To(TempType.r).Output());
+        }
     }
 }

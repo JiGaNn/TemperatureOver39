@@ -68,5 +68,43 @@ namespace TemperatureOver39
         {
             return instance * number;
         }
+        public Temperature To(TempType newType)
+        {
+            var newValue = this.value;
+            if(this.type == TempType.c)
+            {
+                switch(newType)
+                {
+                    case TempType.f:
+                        newValue = this.value * 9 / 5 + 32;
+                        break;
+                    case TempType.k:
+                        newValue = this.value + 273.15;
+                        break;
+                    case TempType.r:
+                        newValue = (this.value + 273.15) * 9 / 5;
+                        break;
+                }
+            }else if(newType == TempType.c)
+            {
+                switch (this.type)
+                {
+                    case TempType.f:
+                        newValue = (this.value - 32) * 5 / 9;
+                        break;
+                    case TempType.k:
+                        newValue = this.value - 273.15;
+                        break;
+                    case TempType.r:
+                        newValue = this.value * 5 / 9 - 273.15;
+                        break;
+                }
+            }
+            else
+            {
+                newValue = this.To(TempType.c).To(newType).value;
+            }
+            return new Temperature(newValue, newType);
+        }
     }
 }
