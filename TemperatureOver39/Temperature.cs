@@ -106,5 +106,13 @@ namespace TemperatureOver39
             }
             return new Temperature(newValue, newType);
         }
+        public static Temperature operator +(Temperature instance1, Temperature instance2)
+        {
+            return instance1 + instance2.To(instance1.type).value;
+        }
+        public static Temperature operator -(Temperature instance1, Temperature instance2)
+        {
+            return instance1 - instance2.To(instance1.type).value;
+        }
     }
 }

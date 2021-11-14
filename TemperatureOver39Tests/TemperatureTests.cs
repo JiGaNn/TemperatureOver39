@@ -83,5 +83,18 @@ namespace TemperatureOver39.Tests
             temp = new Temperature(212, TempType.f);
             Assert.AreEqual("671,67 °Ra", temp.To(TempType.r).Output());
         }
+        [TestMethod()]
+        public void AnySumTest()
+        {
+            var c = new Temperature(102, TempType.c);
+            var k = new Temperature(278, TempType.k);
+            var f = new Temperature(39.4, TempType.f);
+            var r = new Temperature(90, TempType.r);
+            Assert.AreEqual("106,85 °C", (c + k).Output());
+            Assert.AreEqual("-121,15 °C", (c + r).Output());
+            Assert.AreEqual("80,13 °F", (f + k).Output());
+            Assert.AreEqual("589,07 °Ra", (r + f).Output());
+            Assert.AreEqual("328 K", (k + r).Output());
+        }
     }
 }
