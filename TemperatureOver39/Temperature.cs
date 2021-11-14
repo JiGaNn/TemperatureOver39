@@ -114,5 +114,23 @@ namespace TemperatureOver39
         {
             return instance1 - instance2.To(instance1.type).value;
         }
+        public static bool operator ==(Temperature instance1, Temperature instance2)
+        {
+            bool a = false;
+            if(instance1.value == instance2.To(instance1.type).value)
+            {
+                a = true;
+            }
+            return a;
+        }
+        public static bool operator !=(Temperature instance1, Temperature instance2)
+        {
+            bool a = false;
+            if (instance1.value != instance2.To(instance1.type).value)
+            {
+                a = true;
+            }
+            return a;
+        }
     }
 }

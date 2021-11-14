@@ -96,5 +96,14 @@ namespace TemperatureOver39.Tests
             Assert.AreEqual("589,07 °Ra", (r + f).Output());
             Assert.AreEqual("328 K", (k + r).Output());
         }
+        [TestMethod()]
+        public void CompareTest()
+        {
+            var c = new Temperature(100, TempType.c);
+            var k = new Temperature(373.15, TempType.k);
+            var f = new Temperature(39.4, TempType.f);
+            Assert.AreEqual(true, c == k);
+            Assert.AreEqual(false, c == f);
+        }
     }
 }
