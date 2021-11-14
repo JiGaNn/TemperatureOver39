@@ -12,9 +12,21 @@ namespace TemperatureOver39
 {
     public partial class Form1 : Form
     {
+        private void tb_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{Tab}");
+            }
+        }
         public Form1()
         {
             InitializeComponent();
+
+            txt1.KeyUp += tb_KeyUp;
+            txt2.KeyUp += tb_KeyUp;
+            save.KeyUp += tb_KeyUp;
+            clean.KeyUp += tb_KeyUp;
 
             var measureType = new string[]
             {

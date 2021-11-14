@@ -52,7 +52,7 @@ namespace TemperatureOver39
             this.comboBox1.Location = new System.Drawing.Point(14, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBox1.TabIndex = 61;
             this.comboBox1.Text = "сложение";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
@@ -61,7 +61,7 @@ namespace TemperatureOver39
             this.txt1.Location = new System.Drawing.Point(195, 16);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(92, 20);
-            this.txt1.TabIndex = 1;
+            this.txt1.TabIndex = 0;
             this.txt1.TextChanged += new System.EventHandler(this.myChanged);
             // 
             // txt2
@@ -69,7 +69,7 @@ namespace TemperatureOver39
             this.txt2.Location = new System.Drawing.Point(195, 63);
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(92, 20);
-            this.txt2.TabIndex = 2;
+            this.txt2.TabIndex = 1;
             this.txt2.TextChanged += new System.EventHandler(this.myChanged);
             // 
             // result
@@ -77,7 +77,7 @@ namespace TemperatureOver39
             this.result.Location = new System.Drawing.Point(166, 111);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(121, 20);
-            this.result.TabIndex = 3;
+            this.result.TabIndex = 10;
             // 
             // cmbtype1
             // 
@@ -85,7 +85,7 @@ namespace TemperatureOver39
             this.cmbtype1.Location = new System.Drawing.Point(293, 15);
             this.cmbtype1.Name = "cmbtype1";
             this.cmbtype1.Size = new System.Drawing.Size(45, 21);
-            this.cmbtype1.TabIndex = 4;
+            this.cmbtype1.TabIndex = 21;
             this.cmbtype1.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // cmbtype2
@@ -94,7 +94,7 @@ namespace TemperatureOver39
             this.cmbtype2.Location = new System.Drawing.Point(293, 63);
             this.cmbtype2.Name = "cmbtype2";
             this.cmbtype2.Size = new System.Drawing.Size(45, 21);
-            this.cmbtype2.TabIndex = 5;
+            this.cmbtype2.TabIndex = 41;
             this.cmbtype2.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // cmbresultType
@@ -103,7 +103,7 @@ namespace TemperatureOver39
             this.cmbresultType.Location = new System.Drawing.Point(293, 110);
             this.cmbresultType.Name = "cmbresultType";
             this.cmbresultType.Size = new System.Drawing.Size(45, 21);
-            this.cmbresultType.TabIndex = 6;
+            this.cmbresultType.TabIndex = 15;
             this.cmbresultType.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // label1
@@ -120,7 +120,7 @@ namespace TemperatureOver39
             this.save.Location = new System.Drawing.Point(14, 159);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(151, 22);
-            this.save.TabIndex = 8;
+            this.save.TabIndex = 2;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
@@ -130,7 +130,7 @@ namespace TemperatureOver39
             this.clean.Location = new System.Drawing.Point(195, 159);
             this.clean.Name = "clean";
             this.clean.Size = new System.Drawing.Size(151, 22);
-            this.clean.TabIndex = 9;
+            this.clean.TabIndex = 3;
             this.clean.Text = "Очистить";
             this.clean.UseVisualStyleBackColor = true;
             this.clean.Click += new System.EventHandler(this.clean_Click);
