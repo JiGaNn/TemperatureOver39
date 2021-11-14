@@ -26,11 +26,23 @@ namespace TemperatureOver39
             cmbtype1.DataSource = new List<string>(measureType);
             cmbtype2.DataSource = new List<string>(measureType);
             cmbresultType.DataSource = new List<string>(measureType);
+
+            comboBox1.Text = Properties.Settings.Default.comboBox1.ToString();
+            txt1.Text = Properties.Settings.Default.txt1.ToString();
+            txt2.Text = Properties.Settings.Default.txt2.ToString();
+            result.Text = Properties.Settings.Default.result.ToString();
+            cmbtype1.Text = Properties.Settings.Default.cmbtype1.ToString();
+            cmbtype2.Text = Properties.Settings.Default.cmbtype2.ToString();
+            cmbresultType.Text = Properties.Settings.Default.cmbresultType.ToString();
         }
         private void Calculate()
         {
             try
             {
+                if (cmbresultType.Text == "")
+                    cmbresultType.Text = "°C";
+                if (cmbtype2.Text == "")
+                    cmbtype2.Text = "°C";
                 var temp1 = Convert.ToDouble(txt1.Text);
                 var temp2 = Convert.ToDouble(txt2.Text);
 
@@ -51,9 +63,11 @@ namespace TemperatureOver39
                         res = t1 - t2;
                         break;
                     case "умножение на число":
+                        cmbtype2.Text = "";
                         res = t1 * temp2;
                         break;
                     case "сравнение":
+                        cmbresultType.Text = "";
                         if(t1 == t2)
                         {
                             result.Text = "Значения равны";
@@ -98,19 +112,31 @@ namespace TemperatureOver39
             }
             return tempType;
         }
-        private void txt1_TextChanged(object sender, EventArgs e)
+        private void myChanged(object sender, EventArgs e)
         {
             Calculate();
         }
 
-        private void txt2_TextChanged(object sender, EventArgs e)
+        private void clean_Click(object sender, EventArgs e)
         {
-            Calculate();
+            comboBox1.Text = "сложение";
+            txt1.Text = "";
+            txt2.Text = "";
+            result.Text = "";
+            cmbtype1.Text = "°C";
+            cmbtype2.Text = "°C";
+            cmbresultType.Text = "°C";
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void save_Click(object sender, EventArgs e)
         {
-            Calculate();
+            Properties.Settings.Default.comboBox1 = comboBox1.Text;
+            Properties.Settings.Default.txt1 = txt1.Text;
+            Properties.Settings.Default.txt2 = txt2.Text;
+            Properties.Settings.Default.result = result.Text;
+            Properties.Settings.Default.cmbtype1 = cmbtype1.Text;
+            Properties.Settings.Default.cmbtype2 = cmbtype2.Text;
+            Properties.Settings.Default.cmbresultType = cmbresultType.Text;
+            Properties.Settings.Default.Save();
         }
     }
 }

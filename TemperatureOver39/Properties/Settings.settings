@@ -1,7 +1,27 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TemperatureOver39.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="txt1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="txt2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="result" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="comboBox1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">сложение</Value>
+    </Setting>
+    <Setting Name="cmbtype1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">°C</Value>
+    </Setting>
+    <Setting Name="cmbtype2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">°C</Value>
+    </Setting>
+    <Setting Name="cmbresultType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">°C</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
