@@ -54,6 +54,7 @@ namespace TemperatureOver39
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 21);
             this.comboBox1.TabIndex = 61;
+            this.comboBox1.TabStop = false;
             this.comboBox1.Text = "сложение";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
@@ -77,8 +78,10 @@ namespace TemperatureOver39
             // 
             this.result.Location = new System.Drawing.Point(166, 111);
             this.result.Name = "result";
+            this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(121, 20);
             this.result.TabIndex = 10;
+            this.result.TabStop = false;
             // 
             // cmbtype1
             // 
@@ -87,6 +90,7 @@ namespace TemperatureOver39
             this.cmbtype1.Name = "cmbtype1";
             this.cmbtype1.Size = new System.Drawing.Size(45, 21);
             this.cmbtype1.TabIndex = 21;
+            this.cmbtype1.TabStop = false;
             this.cmbtype1.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // cmbtype2
@@ -96,6 +100,7 @@ namespace TemperatureOver39
             this.cmbtype2.Name = "cmbtype2";
             this.cmbtype2.Size = new System.Drawing.Size(45, 21);
             this.cmbtype2.TabIndex = 41;
+            this.cmbtype2.TabStop = false;
             this.cmbtype2.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // cmbresultType
@@ -105,6 +110,7 @@ namespace TemperatureOver39
             this.cmbresultType.Name = "cmbresultType";
             this.cmbresultType.Size = new System.Drawing.Size(45, 21);
             this.cmbresultType.TabIndex = 15;
+            this.cmbresultType.TabStop = false;
             this.cmbresultType.SelectedIndexChanged += new System.EventHandler(this.myChanged);
             // 
             // label1
